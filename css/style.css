@@ -1,3 +1,8 @@
+/* Google Fonts */ /* Atalho para comentar Shift+alt+a */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
+
 /*Tema Dark*/
 :root, :root[data-theme='dark']{
     --primary-color: #f0f0f0; /*cor principal dos textos*/
