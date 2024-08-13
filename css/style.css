@@ -17,7 +17,6 @@
     --link-color: #8f8f8f;
     --link-hover: #f0f0f0;
     --icon-color: #C7C8C9;
-
 }
 /*TEMA LIGHT*/
 :root[data-theme='light']{
@@ -80,4 +79,26 @@ i {
 .header-logo .logo {
     width: 3.25rem;
     height: 3.25rem;
+}
+
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+
+.menu {
+    display: flex;
+    /* Torna o elemento um Flex Container (uma estrutura que se adapta) automaticamente 
+    transformando todos os filhos diretos em Flex Itens */
+    align-items: center;
+    background: var(--primary-bg-color);
+    gap: 1rem;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
