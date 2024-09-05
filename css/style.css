@@ -214,8 +214,77 @@ html[data-theme='light'] .logo2 {
 }
 
 #home, .projetos, .sobre, .contato{
-    padding: 2.5rem 5rem;
+    padding: 5rem 5rem;
 }
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card-cover {
+    width: 100%;
+    border-radius: 2rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.card-title{
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 400;
+    font-family: 'Rubik';
+}
+
+.card-descripicion {
+    color: var(--primary-color);
+    /* font-size: ; */
+    text-align: justify;
+}
+
+.card-lista {
+    margin-left: 2rem;
+}
+
+.card-lista {
+    list-style: circle;
+    margin: 0.25rem;
+}
+
+.card-button, .card-descripicion {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card-button .btn {
+    padding: .65rem 1.25rem;
+}
+
+.card-button span {
+    font-size: 1rem;
+}
+
+.projetos .bnt {
+    width: auto;
+    height: auto;
+}
+
 
 /* =====  --------------------- ======= */
 
@@ -232,6 +301,60 @@ html[data-theme='light'] .logo2 {
     .header-nav {
         display: flex;
     }
+    .header-nav, 
+    .header-toggle{
+        min-width: 30%;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #home, .projetos, .sobre, .contato {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contato {
+        padding: 6rem;
+    }
+    .contato p{
+        width: 80%;
+    }
+    footer {
+        margin: 0;
+    }
 }
 
-
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .card-cover {
+        width: 55%;
+    }
+    .sobre {
+        gap: 5rem;
+    }
+    .sobre-content1, .sobre-content2 {
+        display: grid;
+        grid-template-columns: 34% 60%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+    .descricao-button {
+        justify-content: flex-start;
+    }
+}
