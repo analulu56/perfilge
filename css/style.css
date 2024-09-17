@@ -102,6 +102,8 @@ html[data-theme='light'] .logo2 {
     color: var(--icon-color);
     cursor: pointer;
     transition: ease-in-out .4s;
+    float: right;
+    position: relative;
 }
 
 .menu {
@@ -301,10 +303,63 @@ html[data-theme='light'] .logo2 {
 
 .sobre-perfil {   /* imagem */
     width: 100%;
-    border-radius: 50rem;
+    border-radius: 100rem;
     border: 8px solid var(--link-color); /* cor da borda */
 }
 
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+    gap: 1rem;
+}
+
+.sobre-content2 .col1, .sobre-content2 .col2 {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.sobre-content2 .col1 .row1, .sobre-content2 .col1 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Cursos */
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: 10px solid var(--primary-border-color);
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.accordion-header span {
+    color: var(--title-color);
+}
+
+.accordion-header .start {
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.accordion-body {
+    /* dispaly:none; */
+    padding: 1.25rem;
+    flex-direction: column;
+    text-align: justify;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid var(--primary-bg-color);
+}
 /* =====  --------------------- ======= */
 
 /* CSS Responsivo */
@@ -349,11 +404,14 @@ html[data-theme='light'] .logo2 {
     }
 }
 
+/*-------- fim resolução 768 */
+
 @media (min-width: 992px) {
     .projeto-card {
         flex-direction: row;
+        margin-bottom: 50px;
     }
-    .projeto-card.card-reverse {
+    .card-reverse {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
@@ -363,36 +421,43 @@ html[data-theme='light'] .logo2 {
     .sobre {
         gap: 5rem;
     }
-    .sobre-content1, .sobre-content2 {
+    .sobre-content1, 
+    .sobre-content2 {
         display: grid;
         grid-template-columns: 34% 60%;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 4rem;
     }
-    .sobre-descricao h2 {
-        text-align: left;
-    }
-    .descricao-button {
-        justify-content: flex-start;
-    }
-
 }
 
-@media (min-width:1200px) {
-
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    #home {
+        padding: 10rem 6rem 2rem;
+    }
+    p, span, li {
+        font-size: 1.15rem;
+    }
+    .card-button .btn,
+    .descricao-button .btn {
+        width: auto;
+    }
 }
 
-@media (min-width:1400px) {
-    h1{
+@media (min-width: 1400px) {
+    h1 {
         font-size: 6.25rem;
     }
-    h2{
+    h2 {
         font-size: 4.5rem;
     }
-    h3{
+    h3 {
         font-size: 3.25rem;
     }
 }
-
-
