@@ -223,7 +223,6 @@ html[data-theme='light'] .logo2 {
     flex-direction: column;
     gap: 2rem;
 }
-
 .projetos-container {
     display: flex;
     flex-direction: column;
@@ -246,19 +245,19 @@ html[data-theme='light'] .logo2 {
 .card-body {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-end;
+    align-items: flex-start;
     gap: 1rem;
 }
 
-.card-title{
+.card-title {
     font-size: 2rem;
     color: var(--title-color);
     font-weight: 400;
-    font-family: 'Rubik';
+    font-family: 'Poppins';
 }
 
-.card-descripicion {
+.card-description {
     color: var(--primary-color);
     /* font-size: ; */
     text-align: justify;
@@ -273,7 +272,7 @@ html[data-theme='light'] .logo2 {
     margin: 0.25rem;
 }
 
-.card-button, .card-descripicion {
+.card-button, .card-description {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -303,7 +302,7 @@ html[data-theme='light'] .logo2 {
 
 .sobre-perfil {   /* imagem */
     width: 100%;
-    border-radius: 100rem;
+    border-radius: 50rem;
     border: 8px solid var(--link-color); /* cor da borda */
 }
 
@@ -315,21 +314,31 @@ html[data-theme='light'] .logo2 {
     gap: 1rem;
 }
 
-.sobre-content2 .col1, .sobre-content2 .col2 {
+.sobre-icones {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sobre-icones i {
+    font-size: 1.25rem;
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
     display: flex;
     flex-direction: column;
-
+    text-align: justify;
     gap: 1rem;
 }
 
-.sobre-content2 .col1 .row1, .sobre-content2 .col1 .row2 {
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col1 .row2 {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: .5rem;
 }
-
-/* Cursos */
-
+/* --- Cursos --- */
 .accordion-header {
     width: 100%;
     display: flex;
@@ -337,7 +346,7 @@ html[data-theme='light'] .logo2 {
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    border: 10px solid var(--primary-border-color);
+    border: 1px solid var(--primary-border-color);
     text-align: left;
     cursor: pointer;
     transition: ease-in-out .3s;
@@ -347,19 +356,38 @@ html[data-theme='light'] .logo2 {
     color: var(--title-color);
 }
 
-.accordion-header .start {
+.accordion-header.start {
     border-radius: 1rem 1rem 0rem 0rem;
 }
 
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+
+.accordion-item.active .accordion-item.end {
+    border-radius: 0;
+}
+
 .accordion-body {
-    /* dispaly:none; */
+    /* display: none; */
     padding: 1.25rem;
     flex-direction: column;
     text-align: justify;
     align-items: flex-start;
     gap: 1rem;
-    border: 1px solid var(--primary-bg-color);
+    border: 1px solid var(--primary-border-color);
 }
+
+.accordion-item.active .accordion-header {
+    background: var(--secondary-bg-color);
+}
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* Rotacionar Icone */
+
 /* =====  --------------------- ======= */
 
 /* CSS Responsivo */
@@ -376,7 +404,7 @@ html[data-theme='light'] .logo2 {
         display: flex;
     }
     .header-nav, 
-    .header-toggle{
+    .header-toggle {
         min-width: 30%;
     }
     h1 {
@@ -396,15 +424,16 @@ html[data-theme='light'] .logo2 {
     .contato {
         padding: 6rem;
     }
-    .contato p{
+    .contato p {
         width: 80%;
     }
     footer {
         margin: 0;
     }
-}
+}  
 
-/*-------- fim resolução 768 */
+
+/* -------- fim resolução 768 */
 
 @media (min-width: 992px) {
     .projeto-card {
